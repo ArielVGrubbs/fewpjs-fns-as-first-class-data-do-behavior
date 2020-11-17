@@ -11,3 +11,21 @@ function handleClick(e) {
 
 /* Write your implementation of greet() */
 /* Write your implementation of displayMessage() */
+
+function greet(time){
+  let timeNumArr = time.split(":")
+  if (timeNumArr[0] < 12){
+    return "Good Morning"
+  } else if (timeNumArr[0] < 17){
+    return "Good Afternoon"
+  } else {
+    return "Good Evening"
+  }
+}
+
+function displayMessage(message){
+  let node1 = document.querySelector("#greeting")
+  node1.innerText = message
+  console.log(node1.innerText)
+  return node1.innerText
+}
